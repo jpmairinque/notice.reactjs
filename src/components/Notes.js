@@ -1,11 +1,8 @@
 import React from "react";
 import Note from "./Note";
 
-
-
 const Notes = ({ notes }) => {
-
-    return (
+  return (
     <div className="notelist">
       {notes.map((note, index) => (
         <Note key={index} title={note.title} text={note.text} tag={note.tag} />

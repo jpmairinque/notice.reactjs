@@ -16,13 +16,32 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem;
 }
 
-header img {
+header section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo, header .add {
   width: 50px;
   height: 50px;
   margin-right: 15px;
+}
+
+header .add {
+  cursor: pointer;
 }
 
 .red {
@@ -94,5 +113,17 @@ header img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 20px;
+}
+
+.addNoteForm {
+  margin-right: 1rem;
+}
+
+.addNoteForm input {
+  height: 30px;
+  border-radius: 20px;
+  border: solid 0.5px black;
+  margin-left: 10px;
+  padding: 5px;
 }
 /*# sourceMappingURL=home.css.map */

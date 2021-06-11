@@ -1,7 +1,6 @@
 import React from "react";
 
 const Note = ({ title, text, tag }) => {
-
   var tagColor = "";
   switch (tag) {
     case "School":
@@ -15,12 +14,12 @@ const Note = ({ title, text, tag }) => {
   }
 
   return (
-    <div className="notebox"> 
+    <div className="notebox">
       <h1>{title}</h1>
       <p>{text}</p>
-      
+
       <div className={tagColor}>
-      <span>{tag}</span>
+        <span>{tag}</span>
       </div>
     </div>
   );

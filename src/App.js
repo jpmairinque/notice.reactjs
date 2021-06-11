@@ -6,6 +6,7 @@ import logo from "./images/noticelogo.png";
 import add from "./images/add.png";
 
 function App() {
+  const [showAddNote, setShowAddNote] = useState(false);
   const [notes, setNotes] = useState([
     {
       title: "Fish Anatomy",
@@ -36,15 +37,25 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src={logo} alt="" />
-        <div>
-          <h1>Notice</h1>
-          <span>Your note app</span>
-        </div>
+        <section>
+          <img src={logo} className="logo" alt="" />
+          <div>
+            <h1>Notice</h1>
+            <span>Your note app</span>
+          </div>
+        </section>
+        <section>
+          {showAddNote ? <AddNote onAdd={insertNote} /> : ""}
 
+          <img
+            src={add}
+            className="add"
+            alt=""
+            onClick={() => setShowAddNote(!showAddNote)}
+          />
+        </section>
       </header>
       <Notes notes={notes} />
-      <AddNote onAdd={insertNote} />
     </div>
   );
 }
