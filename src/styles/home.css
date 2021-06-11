@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +13,86 @@ body {
 header {
   background-color: #343a40;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
 }
 
-header div {
+header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.red {
+  background-color: red !important;
+}
+
+.blue {
+  background-color: blue !important;
+}
+
+.green {
+  background-color: green !important;
+}
+
+.notebox {
+  position: relative;
+  height: 200px;
+  background-color: #ebf746;
+  width: 200px;
+  border-radius: 15px;
   padding: 1rem;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+}
+
+.notebox:hover {
+  background-color: #fac629;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.notebox h1 {
+  margin-bottom: 15px;
+}
+
+.notebox .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: blue;
+  height: 30px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.notebox .tag span {
+  color: white;
+  font-weight: 400;
+}
+
+.notelist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=home.css.map */

@@ -13,12 +13,14 @@ const AddNote = ({onAdd}) => {
         return
     }
 
+
     document.forms['addnote'].reset()
 
     onAdd({title, text, tag})
 
     setTitle('')
     setText('')
+    
    
 
     
@@ -33,6 +35,7 @@ const AddNote = ({onAdd}) => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <input
+       
         type="textbox"
         placeholder="Note text"
         onChange={(e) => setText(e.target.value)}

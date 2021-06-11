@@ -1,24 +1,27 @@
 import React from "react";
 
 const Note = ({ title, text, tag }) => {
-    
+
   var tagColor = "";
   switch (tag) {
     case "School":
-      tagColor = "green";
+      tagColor = "tag blue";
       break;
     case "Work":
-      tagColor = "red";
+      tagColor = "tag red";
       break;
     case "Home":
-      tagColor = "yellow";
+      tagColor = "tag green";
   }
 
   return (
-    <div>
+    <div className="notebox"> 
       <h1>{title}</h1>
       <p>{text}</p>
+      
+      <div className={tagColor}>
       <span>{tag}</span>
+      </div>
     </div>
   );
 };
