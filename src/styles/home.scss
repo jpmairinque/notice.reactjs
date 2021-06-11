@@ -76,7 +76,7 @@ header {
   .tag {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: blue;
     height: 30px;
     position: absolute;
@@ -85,9 +85,15 @@ header {
     width: 100%;
     border-radius: 0px 0px 15px 15px;
 
+    img{
+      width: 20px;
+      margin-right: 20px;
+    }
+
     span {
       color: white;
       font-weight: 400;
+      margin-left: 20px;
     }
   }
 }
@@ -101,7 +107,7 @@ header {
 .addNoteForm {
   margin-right: 1rem;
 
-  input {
+  input, select {
     height: 30px;
     border-radius: 20px;
     border: solid 0.5px black;

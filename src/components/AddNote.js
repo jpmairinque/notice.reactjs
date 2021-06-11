@@ -8,8 +8,8 @@ const AddNote = ({ onAdd }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (text === "" || title === "") {
-      alert("Please insert note's text and name! ");
+    if (text === "" || title === "" || tag ==="" ) {
+      alert("Please insert note's text, name and tag! ");
       return;
     }
 

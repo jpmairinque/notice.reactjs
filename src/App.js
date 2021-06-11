@@ -4,9 +4,12 @@ import Notes from "./components/Notes";
 import AddNote from "./components/AddNote";
 import logo from "./images/noticelogo.png";
 import add from "./images/add.png";
+import filter from "./images/filter.png";
 
 function App() {
   const [showAddNote, setShowAddNote] = useState(false);
+  const [showFilter, setShowFilter] = useState(false);
+  
   const [notes, setNotes] = useState([
     {
       title: "Fish Anatomy",
@@ -19,7 +22,7 @@ function App() {
       tag: "Work",
     },
     {
-      title: "Fish Anatomy",
+      title: "Car Anatomy",
       text: "Studying fish anatomy is very important in marine biology",
       tag: "Home",
     },
@@ -34,6 +37,10 @@ function App() {
     setNotes([...notes, newNote]);
   };
 
+  const deleteNote = (key) => {
+    setNotes(notes.filter((note) => note.title !== key));
+  };
+
   return (
     <div className="App">
       <header>
@@ -45,6 +52,7 @@ function App() {
           </div>
         </section>
         <section>
+          <img src={filter} alt="" className="logo" />
           {showAddNote ? <AddNote onAdd={insertNote} /> : ""}
 
           <img
@@ -55,7 +63,7 @@ function App() {
           />
         </section>
       </header>
-      <Notes notes={notes} />
+      <Notes onDelete={deleteNote} notes={notes} />
     </div>
   );
 }

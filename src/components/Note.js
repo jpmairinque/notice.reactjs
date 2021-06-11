@@ -1,6 +1,11 @@
 import React from "react";
+import trash from "../images/delete.png";
 
-const Note = ({ title, text, tag }) => {
+const Note = ({ title, text, tag, delNote }) => {
+
+
+
+
   var tagColor = "";
   switch (tag) {
     case "School":
@@ -11,7 +16,9 @@ const Note = ({ title, text, tag }) => {
       break;
     case "Home":
       tagColor = "tag green";
+   
   }
+
 
   return (
     <div className="notebox">
@@ -20,6 +27,7 @@ const Note = ({ title, text, tag }) => {
 
       <div className={tagColor}>
         <span>{tag}</span>
+        <img src={trash} alt="" onClick={()=>delNote(title)}/>
       </div>
     </div>
   );
