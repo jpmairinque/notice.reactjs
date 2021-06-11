@@ -29,8 +29,12 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+      <div>
       <h1>Notice</h1>
-      <p>Your note app</p>
+      <span>Your note app</span>
+      </div>
+      </header>
       <Notes notes={notes} />
       <AddNote onAdd={insertNote}/>
     </div>
