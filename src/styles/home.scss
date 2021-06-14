@@ -32,12 +32,14 @@ header {
     width: 50px;
     height: 50px;
     margin-right: 15px;
+    cursor: pointer;
   }
 
   .add {
     @extend .logo;
     cursor: pointer;
   }
+  
 }
 
 .red {
@@ -104,7 +106,7 @@ header {
   margin-top: 20px;
 }
 
-.addNoteForm {
+.addNoteForm , .filterForm{
   margin-right: 1rem;
 
   input, select {

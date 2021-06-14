@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./styles/home.css";
 import Notes from "./components/Notes";
+import Filter from "./components/Filter";
 import AddNote from "./components/AddNote";
 import logo from "./images/noticelogo.png";
 import add from "./images/add.png";
@@ -9,7 +10,8 @@ import filter from "./images/filter.png";
 function App() {
   const [showAddNote, setShowAddNote] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
-  
+  const [tagFilter, setTagFilter] = useState("All");
+
   const [notes, setNotes] = useState([
     {
       title: "Fish Anatomy",
@@ -39,6 +41,7 @@ function App() {
 
   const deleteNote = (key) => {
     setNotes(notes.filter((note) => note.title !== key));
+    
   };
 
   return (
@@ -52,7 +55,17 @@ function App() {
           </div>
         </section>
         <section>
-          <img src={filter} alt="" className="logo" />
+          {showFilter ? (
+            <Filter tagFilter={tagFilter} setTagFilter={setTagFilter} />
+          ) : (
+            ""
+          )}
+          <img
+            src={filter}
+            alt=""
+            className="logo"
+            onClick={() => setShowFilter(!showFilter)}
+          />
           {showAddNote ? <AddNote onAdd={insertNote} /> : ""}
 
           <img
@@ -63,7 +76,7 @@ function App() {
           />
         </section>
       </header>
-      <Notes onDelete={deleteNote} notes={notes} />
+      <Notes tagFilter={tagFilter} onDelete={deleteNote} notes={notes} />
     </div>
   );
 }
