@@ -46,21 +46,21 @@ header .add {
 }
 
 .red {
-  background-color: red !important;
+  background-color: #c64756 !important;
 }
 
 .blue {
-  background-color: blue !important;
+  background-color: #619eee !important;
 }
 
 .green {
-  background-color: green !important;
+  background-color: #1eae98 !important;
 }
 
 .notebox {
   position: relative;
   height: 200px;
-  background-color: #ebf746;
+  background-color: white;
   width: 200px;
   border-radius: 15px;
   padding: 1rem;
@@ -69,10 +69,11 @@ header .add {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   cursor: pointer;
+  -webkit-animation: appear 0.5s ease-in;
+          animation: appear 0.5s ease-in;
 }
 
 .notebox:hover {
-  background-color: #fac629;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
   -webkit-transition: 0.3s;
@@ -122,15 +123,61 @@ header .add {
   margin-top: 20px;
 }
 
-.addNoteForm, .filterForm {
+.addNoteForm,
+.filterForm {
+  -webkit-animation: slide-right 0.6s;
+          animation: slide-right 0.6s;
   margin-right: 1rem;
 }
 
-.addNoteForm input, .addNoteForm select, .filterForm input, .filterForm select {
+.addNoteForm input,
+.addNoteForm select,
+.filterForm input,
+.filterForm select {
   height: 30px;
   border-radius: 20px;
   border: solid 0.5px black;
   margin-left: 10px;
   padding: 5px;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 /*# sourceMappingURL=home.css.map */

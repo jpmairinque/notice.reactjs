@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 $textcolor: white;
-$yellow: #ebf746;
+$white: white;
 $black: #343a40;
 
 * {
@@ -39,24 +39,23 @@ header {
     @extend .logo;
     cursor: pointer;
   }
-  
 }
 
 .red {
-  background-color: red !important;
+  background-color: #c64756 !important;
 }
 .blue {
-  background-color: blue !important;
+  background-color: #619eee !important;
 }
 
 .green {
-  background-color: green !important;
+  background-color: #1eae98 !important;
 }
 
 .notebox {
   position: relative;
   height: 200px;
-  background-color: $yellow;
+  background-color: $white;
   width: 200px;
   border-radius: 15px;
   padding: 1rem;
@@ -64,9 +63,10 @@ header {
   margin-bottom: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   cursor: pointer;
+  animation: appear 0.5s ease-in;
 
   &:hover {
-    background-color: #fac629;
+    
     transform: scale(1.03);
     transition: 0.3s;
   }
@@ -87,7 +87,7 @@ header {
     width: 100%;
     border-radius: 0px 0px 15px 15px;
 
-    img{
+    img {
       width: 20px;
       margin-right: 20px;
     }
@@ -106,14 +106,35 @@ header {
   margin-top: 20px;
 }
 
-.addNoteForm , .filterForm{
+.addNoteForm,
+.filterForm {
+  animation: slide-right 0.6s;
   margin-right: 1rem;
 
-  input, select {
+  input,
+  select {
     height: 30px;
     border-radius: 20px;
     border: solid 0.5px black;
     margin-left: 10px;
     padding: 5px;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
