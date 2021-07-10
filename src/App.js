@@ -19,13 +19,13 @@ function App() {
       tag: "School",
     },
     {
-      title: "Grocery List",
-      text: "Peanuts, bananas, apples, pencils, toothpaste",
+      title: "Tasks resume",
+      text: "Write code, research users",
       tag: "Work",
     },
     {
-      title: "Car Anatomy",
-      text: "Studying fish anatomy is very important in marine biology",
+      title: "Grocery List",
+      text: "Peanuts, bananas, apples, pencils, toothpaste",
       tag: "Home",
     },
   ]);

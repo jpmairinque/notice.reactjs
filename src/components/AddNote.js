@@ -8,7 +8,7 @@ const AddNote = ({ onAdd }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (text === "" || title === "" || tag ==="" ) {
+    if (text === "" || title === "" || tag === "") {
       alert("Please insert note's text, name and tag! ");
       return;
     }
@@ -19,7 +19,7 @@ const AddNote = ({ onAdd }) => {
 
     setTitle("");
     setText("");
-    setTag("School")
+    setTag("School");
   };
 
   return (
