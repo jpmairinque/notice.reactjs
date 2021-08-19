@@ -1,7 +1,7 @@
 # Notice - Notes App 📝📒
 The app allows you to write notes based on their category.
 
-*// A aplicação permite escrever notas com base na categoria delas*
+*// A aplicação permite escrever notas com base em suas categorias*
 
 ## App Overview // *overview da aplicação* 💻
 ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/53411709/125174377-7d1a7b00-e19b-11eb-9efc-7e960182b295.gif)
